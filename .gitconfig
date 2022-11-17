@@ -1,0 +1,11 @@
+[user]
+	name = "Murphy"
+	email = "me@murphy-in.tech"
+[color]
+	ui = auto
+[push]
+    autoSetupRemote = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
