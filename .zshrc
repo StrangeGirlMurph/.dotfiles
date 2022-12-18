@@ -22,6 +22,11 @@ zstyle :compinstall filename '/home/murphy/.zshrc'
 autoload -Uz compinit
 compinit
 
+# deno
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit
+compinit -u
+
 source $ZSH/oh-my-zsh.sh
 
 # Uncomment the following line to use case-sensitive completion.
@@ -85,19 +90,3 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Starship
 eval "$(starship init zsh)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/murphy/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/murphy/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/murphy/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/murphy/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
